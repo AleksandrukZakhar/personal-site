@@ -21,9 +21,13 @@ const animate = () => {
     const speed = 3;
 
     stars.forEach((star) => {
-        const pos = parseInt(star.style.left) + speed;
+        const pos = parseInt(star.style.left);
 
-        star.style.left = `${pos}px`;
+        if (pos > 1920) {
+            star.remove();
+        }
+
+        star.style.left = `${pos + speed}px`;
     });
 };
 
