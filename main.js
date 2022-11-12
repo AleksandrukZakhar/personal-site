@@ -34,4 +34,5 @@ const animate = () => {
 setInterval(animate, 20);
 
 const audio = new Audio("/interstellar.mp3");
+audio.loop = true;
 audio.play();
